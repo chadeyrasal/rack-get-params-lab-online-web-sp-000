@@ -1,6 +1,6 @@
 class Application
 
-  @@items = ["Apples","Carrots","Pears"]
+  @@items = ["Apples","Carrots","Pears", 'Figs']
   @@cart = ["Apples", "Oranges"]
 
   def call(env)
@@ -23,6 +23,7 @@ class Application
         end
       end
     elsif req.path.match(/add/)
+      
     else
       resp.write "Path Not Found"
     end
